@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,600;1,600&family=Solway:wght@300;400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rem{
+font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.solway{
+    font-family: "Solway", serif;
+    font-weight: 500;
+    font-style: normal;
+}
