@@ -61,7 +61,7 @@ const About = () => {
         <p>
           For more information or to view the source code, please visit the
           project's{" "}
-          <a href="#" className="text-blue-500">
+          <a href="https://github.com/PrinceRai1/SortViz" className="text-blue-500">
             GitHub repository
           </a>
           .
