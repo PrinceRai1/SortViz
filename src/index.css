@@ -5,15 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.rem{
-font-family: "REM", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "REM", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
-
-.solway{
-    font-family: "Solway", serif;
-    font-weight: 500;
-    font-style: normal;
+p,a,button,link,Link,li,select{
+  font-family: "Solway", serif;
+  font-weight: 400;
+  font-style: normal;
 }

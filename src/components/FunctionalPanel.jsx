@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import InformationalPanel from "./InformationalPanel";
 
 export const FunctionalPanel = () => {
-  const [arraySize, setArraySize] = useState(0);
+  const [arraySize, setArraySize] = useState(10);
   const [array, setArray] = useState([]);
   const [speed, setSpeed] = useState(100);
   const [comparisons, setComparisons] = useState(0);
   const [swaps, setSwaps] = useState(0);
-  const [algorithm, setAlgorithm] = useState("Select Algorithm");
+  const [sorting,setSorting] = useState("Select Algorithm")
+  const [algorithm, setAlgorithm] = useState("");
 
   const handleArraySizeChange = (event) => {
     const size = parseInt(event.target.value, 10);
@@ -15,7 +16,6 @@ export const FunctionalPanel = () => {
       setArraySize(size);
     }
   };
-
   const generateArray = () => {
     const newArray = Array.from(
       { length: arraySize },
@@ -30,6 +30,8 @@ export const FunctionalPanel = () => {
     resetArray();
   }, []);
 
+  // setSorting(algorithm?<p>Start Sorting</p>:<p>Select Alogorithm</p>)
+
   const resetArray = () => {
     const newArray = Array.from(
       { length: 10 },
@@ -38,6 +40,7 @@ export const FunctionalPanel = () => {
     setArray(newArray);
     setComparisons(0);
     setSwaps(0);
+    setAlgorithm("")
   };
 
   const bubbleSort = async () => {
@@ -237,6 +240,7 @@ export const FunctionalPanel = () => {
       default:
         break;
     }
+
   };
 
   return (
@@ -288,7 +292,7 @@ export const FunctionalPanel = () => {
             onChange={(e) => setAlgorithm(e.target.value)}
             value={algorithm}
           >
-            <option className="solway outline-none " value="Select Algorithm">
+            <option className="solway outline-none " value="">
               Select Algorithm
             </option>
             <option className="solway outline-none " value="bubbleSort">
@@ -316,7 +320,7 @@ export const FunctionalPanel = () => {
             class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 hover:-translate-y-1 hover:scale-110 m-2 solway ease-in duration-300"
             onClick={runSort}
           >
-            Start Sorting
+           {algorithm ? `Start Sorting` : 'Select Algorithm'}
           </button>
           <button
             class="bg-white hover:text-white text-gray-700 border border-gray-300 px-4 py-2 rounded hover:bg-red-600 active:bg-red-600 hover:-translate-y-1 hover:scale-110 solway m-2 ease-in duration-300"
