@@ -244,7 +244,7 @@ export const FunctionalPanel = () => {
   };
 
   return (
-    <main>
+    <main className="px-8">
       <div class="bg-white my-6 text-xs md:text-base">
         <div class="flex justify-between items-center mb-4 flex-col md:flex-row">
           <button
