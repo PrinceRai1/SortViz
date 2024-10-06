@@ -20,12 +20,12 @@ const Navbar = () => {
     } else {
       document.body.style.overflow = 'auto';
     }
-
-    // Cleanup function to reset overflow on component unmount
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [isMobileMenuOpen]);
+
+  
   return (
     <nav className="flex justify-between items-center p-8">
       <div className="flex items-center ">

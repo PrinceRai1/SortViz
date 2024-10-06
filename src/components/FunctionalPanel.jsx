@@ -330,7 +330,7 @@ export const FunctionalPanel = () => {
           </button>
         </div>
       </div>
-      <div className="h-1/2 flex justify-center items-center flex-wrap gap-1 my-40">
+      <div className="h-1/2 flex justify-center items-center flex-wrap gap-2 my-10">
         {array.map((value, idx) => (
           <div
             className="bg-[turquoise] text-black solway font-medium flex justify-center border rounded-full items-center transition duration-100 ease-in-out p-6"
