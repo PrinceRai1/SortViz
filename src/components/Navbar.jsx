@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropdown from './Dropdown';
 import { Link } from 'react-router-dom';
+import Logo from "../assets/Logo.png"
 
 
 
@@ -10,7 +11,7 @@ const Navbar = () => {
     <nav className="flex justify-between items-center">
       <div className="flex items-center ">
         <a href="/" className="text-lg font-bold text-gray-800 hover:text-gray-600">
-          <img src="src\assets\Logo.png" alt="/"  className='w-32 h-16 bg-transparent drop-shadow-md'/>
+          <img src={Logo} alt="LOGO"  className='w-32 h-16 bg-transparent drop-shadow-md'/>
         </a>
       </div>
       <ul className="hidden md:flex justify-between items-center solway">
