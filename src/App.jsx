@@ -1,7 +1,8 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { FunctionalPanel } from "./components/FunctionalPanel";
-import { Route, Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { HashRouter as Router } from 'react-router-dom';
 import BubbleSort from "./pages/BubbleSort";
 import HeapSort from "./pages/HeapSort";
 import SelectionSort from "./pages/SelectionSort";
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
+      <Router>
         <Route path="/" element={<FunctionalPanel />} />
         <Route path="/about" element={<About />} />
         <Route path="/bubblesort" element={<BubbleSort />} />
@@ -24,7 +25,7 @@ function App() {
         <Route path="/quicksort" element={<QuickSort />} />
         <Route path="/mergesort" element={<MergeSort />} />
 
-      </Routes>
+      </Router>
     </>
   );
 }
